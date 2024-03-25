@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-    // Defines a variable for acceleration
+    // Defines a variable for acceleration accessible in the inspector
     [SerializeField]
     private float acceleration = 5000f;
     // Declares a variable for a Rigidbody component
@@ -14,16 +14,10 @@ public class PlayerMovementScript : MonoBehaviour
         // Gets the Rigidbody component and stores it in ourRigidbody variable
         ourRigidbody = GetComponent<Rigidbody2D>();
     }
-    // Update is called once per frame
-    void Update()
+    
+    public void HorizontalMovement(float HorizontalInput)
     {
-        float HorizontalInput = Input.GetAxis("Horizontal");
-
-        if (HorizontalInput != 0.0f)
-        {
             Vector2 ForceToAdd = Vector2.right * HorizontalInput * acceleration * Time.deltaTime;
-            ourRigidbody.AddForce(ForceToAdd);
-            //print(HorizontalInput);
-        }
+            ourRigidbody.AddForce(ForceToAdd);            
     }
 }

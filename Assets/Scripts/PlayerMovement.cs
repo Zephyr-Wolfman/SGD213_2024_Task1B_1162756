@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovementScript : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     // Defines a variable for acceleration accessible in the inspector
     [SerializeField]

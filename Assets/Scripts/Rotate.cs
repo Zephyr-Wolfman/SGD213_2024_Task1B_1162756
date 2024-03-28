@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Rotate : MonoBehaviour
@@ -6,7 +6,6 @@ public class Rotate : MonoBehaviour
     [SerializeField]
     private float maximumSpinSpeed = 200;
 
-    // Use this for initialization
     void Start()
     {
         RotateObject();
@@ -16,4 +15,5 @@ public class Rotate : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-maximumSpinSpeed, maximumSpinSpeed);
     }
+    
 }

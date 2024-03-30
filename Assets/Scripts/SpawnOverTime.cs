@@ -12,7 +12,6 @@ public class SpawnOverTime : MonoBehaviour
     private float spawnDelay = 2f;
     private Renderer ourRenderer;
 
-    // Use this for initialization
     void Start()
     {
         ourRenderer = GetComponent<Renderer>();

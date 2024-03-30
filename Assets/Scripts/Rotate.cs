@@ -11,6 +11,7 @@ public class Rotate : MonoBehaviour
         RotateObject();
     }
 
+    // Rotates object using random angular velocity
     void RotateObject()
     {
         GetComponent<Rigidbody2D>().angularVelocity = Random.Range(-maximumSpinSpeed, maximumSpinSpeed);

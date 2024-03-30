@@ -8,13 +8,14 @@ public class MoveForward : MonoBehaviour
 
     void Start()
     {
-        movable = GetComponent<IMovable>();      
+        movable = GetComponent<IMovable>();
+        //Initilised forward movement to the object     
         movable.MoveForward();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // applies acceleration to the object
         movable.Acceleration();
     }
 }

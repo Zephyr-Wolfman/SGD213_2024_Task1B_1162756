@@ -17,11 +17,13 @@ public class PlayerInput : MonoBehaviour
     {
         float HorizontalInput = Input.GetAxis("Horizontal");
 
+        // Move player Horizontally if input recieved
         if (HorizontalInput != 0.0f)
         {
             playerMovement.HorizontalMovement(HorizontalInput);
         }
 
+        // Shoot bullet if fire button is pressed
         if (Input.GetButton("Fire1"))
         {
             shooting.Shoot();

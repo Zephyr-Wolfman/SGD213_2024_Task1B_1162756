@@ -11,15 +11,16 @@ public class Bullet : MonoBehaviour, IMovable
 
     void Start()
     {
-        // Gets the Rigidbody component and stores it in ourRigidbody variable
         ourRigidbody = GetComponent<Rigidbody2D>();
     }
 
+    // Set the bullets upward velocity
     public void MoveForward()
     {
         ourRigidbody.velocity = Vector2.up * initialVelocity;
     }
 
+    // Apply upward force
     public void Acceleration()
     {
         Vector2 ForceToAdd = Vector2.up * acceleration * Time.deltaTime;
